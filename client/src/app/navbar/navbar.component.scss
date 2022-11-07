@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.main-navigation{
+  background-color: $dark;
+  width: 100%;
+  height: 72px;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.circle {
+    height: 16px;
+    width: 16px;
+    margin-left: 28px;
+    margin-right: 12px;
+    fill: $purple;
+}
+
+.logo-text {
+    color: $white;
+    font-family: $primary;
+    font-size: $l;
+    font-weight: $bold;
+    text-decoration: none;
+}
+
+.line {
+    background-color: $grayDark;
+    height: 36px;
+    width: 2px;
+    margin: 0 32px;
+}
