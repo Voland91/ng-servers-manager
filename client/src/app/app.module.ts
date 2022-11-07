@@ -6,11 +6,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { ServersListComponent } from './servers-list/servers-list.component';
+import { ServersTitleComponent } from './servers-list/servers-title/servers-title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ServersListComponent,
+    ServersTitleComponent
   ],
   imports: [
     BrowserModule,
