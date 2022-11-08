@@ -1,0 +1,8 @@
+<div class="server-item">
+    <p class="server-name">{{server.serverName}}</p>
+    <div class="status-wrapper">
+        <mat-icon [class]="iconSwitcher()" [svgIcon]="iconSwitcher()"></mat-icon>
+        <p class="status" [class]="server.serverStatus === 'offline' && 'offline'">{{server.serverStatus}}</p>
+    </div>
+    <app-server-menu></app-server-menu>
+</div>

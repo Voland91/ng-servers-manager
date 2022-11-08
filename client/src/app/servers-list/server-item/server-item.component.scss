@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+
+.server-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    height: 56px;
+    background-color: $white;
+    border: solid 1px $grayLight;
+    margin-top: -1px;
+    padding: 0 32px;
+}
+
+.status-wrapper {
+    width: 100%;
+    max-width: 424px;
+    padding-left: 44px;
+    padding-right: 24px;
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+}
+
+.online-icon {
+    font-size: 8px;
+    height: 8px;
+    width:8px;
+    line-height: 8px;
+    fill: $greenLight;
+    margin-right: 8px;
+    margin-top: 3px;
+}
+
+.offline-icon {
+    font-size: 11px;
+    height: 11px;
+    width: 11px;
+    line-height: 11px;
+    fill: $red;
+    margin-right: 8px;
+    margin-top: 3px;
+    margin-left: -2px
+}
+
+.status{
+    font-size: $xs;
+    color: $green;
+    text-transform: uppercase;
+}
+
+.offline {
+    color: $red;
+}

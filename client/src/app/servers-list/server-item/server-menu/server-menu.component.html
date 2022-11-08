@@ -1,0 +1,14 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" class="menu">
+    <mat-icon class="menu-icon" svgIcon="menu-icon"></mat-icon>
+</button>
+<mat-menu #menu="matMenu" yPosition="below">
+    <button mat-menu-item>
+        <span>Turn On</span>
+    </button>
+    <button mat-menu-item>
+        <span>Turn Off</span>
+    </button>
+    <button mat-menu-item>
+        <span>Reboot</span>
+    </button>
+</mat-menu>

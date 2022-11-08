@@ -1,0 +1,20 @@
+@import '../../../../styles/variables';
+
+.menu {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 2px;
+    padding: 5px;
+}
+
+.menu-icon {
+    fill: $greenLight;
+    height: 16px;
+    width: 16px;
+}
+
+.mat-menu-item {
+    line-height: 32px;
+    height: 32px;
+}
