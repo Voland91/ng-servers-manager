@@ -1,6 +1,9 @@
 <main class="servers-wrapper">
-    <app-servers-title></app-servers-title>
     <section class="servers-list">
+        <div class="list-header">
+            <p class="name">name</p>
+            <p class="status">status</p>
+        </div>
         <app-server-item 
             *ngFor="let server of servers"
             [server]="server"

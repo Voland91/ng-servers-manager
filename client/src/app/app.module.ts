@@ -10,7 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServersListComponent } from './servers-list/servers-list.component';
-import { ServersTitleComponent } from './servers-list/servers-title/servers-title.component';
+import { ServersTitleComponent } from './servers-title/servers-title.component';
 import { FormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import { ServerMenuComponent } from './servers-list/server-item/server-menu/server-menu.component';

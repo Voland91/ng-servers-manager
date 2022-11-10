@@ -26,12 +26,22 @@ export class ServerItemComponent implements OnInit {
   }
 
   iconSwitcher() {
-    switch (this.server.serverStatus) {
-    case 'online':
+    if(this.server.status === 'ONLINE') {
       return 'online-icon';
+    }
+    return 'offline-icon';
+  }
 
-    case 'offline':
-      return 'offline-icon';
+  switchClass() {
+    switch (this.server.status) {
+    case 'ONLINE':
+      return 'online';
+
+    case 'OFFLINE':
+      return 'offline';
+
+    case 'REBOOTING':
+      return 'reboot';
 
     default:
       return '';

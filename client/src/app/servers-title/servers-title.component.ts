@@ -15,7 +15,7 @@ export class ServersTitleComponent implements OnInit {
   ) {
     this.matIconRegistry.addSvgIcon(
       'search-icon',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/search.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/search.svg')
     );
   }
 

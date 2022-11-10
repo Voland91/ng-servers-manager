@@ -6,19 +6,28 @@
     width: 100%;
     justify-content: space-between;
     height: 56px;
-    background-color: $white;
     border: solid 1px $grayLight;
     margin-top: -1px;
     padding: 0 32px;
 }
 
+.server-name {
+    display: block;
+    max-width: 400px;
+    width: 100%;
+}
+
+.server-status {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .status-wrapper {
     width: 100%;
     max-width: 424px;
-    padding-left: 44px;
     padding-right: 24px;
     display: flex;
-    flex: 1;
     align-items: baseline;
 }
 
@@ -45,10 +54,17 @@
 
 .status{
     font-size: $xs;
-    color: $green;
     text-transform: uppercase;
 }
 
 .offline {
     color: $red;
+}
+
+.online {
+    color: $green;
+}
+
+.reboot {
+    color: $grayBlue;
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import {Server} from '../../../shared/interfaces';
 
 @Component({
   selector: 'app-server-menu',
@@ -8,19 +9,33 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./server-menu.component.scss']
 })
 export class ServerMenuComponent implements OnInit {
+    @Input() server: Server = {} as Server;
+    options: string[] = [];
 
-  constructor(
+    constructor(
         private matIconRegistry: MatIconRegistry,
         private domSanitizer: DomSanitizer
 
-  ) {
-    this.matIconRegistry.addSvgIcon(
-      'menu-icon',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../../assets/icons/dots.svg')
-    );
-  }
+    ) {
+      this.matIconRegistry.addSvgIcon(
+        'menu-icon',
+        this.domSanitizer.bypassSecurityTrustResourceUrl('../../../../assets/icons/dots.svg')
+      );
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+      this.setOptions();
+    }
 
+    setOptions() {
+      switch (this.server.status) {
+      case 'ONLINE':
+        this.options = ['Turn off', 'Reboot'];
+        break;
+
+      case 'OFFLINE':
+        this.options = ['Turn on'];
+        break;
+      }
+    }
 }

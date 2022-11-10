@@ -1,4 +1,5 @@
 export interface Server {
-  serverName: string,
-  serverStatus: string
+  id: number,
+  name: string,
+  status: string
 }

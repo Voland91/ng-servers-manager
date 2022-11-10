@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Server } from '../shared/interfaces';
 
@@ -8,15 +9,16 @@ import { Server } from '../shared/interfaces';
 })
 
 export class ServersListComponent implements OnInit {
-  servers: Server[] = [
-    {serverName: 'Serwer1', serverStatus: 'offline'},
-    {serverName: 'Serwer2', serverStatus: 'online'},
-    {serverName: 'Serwer3', serverStatus: 'rebooting'}
-  ];
+  servers: Server[] = [];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
+    this.fetchServers();
   }
 
+  private fetchServers() {
+    this.http.get<Server[]>('http://localhost:4454/servers')
+      .subscribe(servers => this.servers = servers);
+  }
 }

@@ -1,8 +1,14 @@
 <div class="server-item">
-    <p class="server-name">{{server.serverName}}</p>
-    <div class="status-wrapper">
-        <mat-icon [class]="iconSwitcher()" [svgIcon]="iconSwitcher()"></mat-icon>
-        <p class="status" [class]="server.serverStatus === 'offline' && 'offline'">{{server.serverStatus}}</p>
+    <p class="server-name">{{server.name}}</p>
+    <div class="server-status">
+        <div class="status-wrapper">
+            <mat-icon 
+                [class]="iconSwitcher()"
+                [svgIcon]="iconSwitcher()"
+                *ngIf="server.status === 'ONLINE' || server.status === 'OFFLINE'"
+                ></mat-icon>
+            <p class="status" [ngClass]="switchClass()">{{server.status}}<span *ngIf="server.status === 'REBOOTING'">...</span></p>
+        </div>
+        <app-server-menu [server]="server"></app-server-menu>
     </div>
-    <app-server-menu></app-server-menu>
 </div>
